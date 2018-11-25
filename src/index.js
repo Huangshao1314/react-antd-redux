@@ -1,8 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './router';
 import * as serviceWorker from './serviceWorker';
+
+import { LocaleProvider } from 'antd';
+import enUS from 'antd/lib/locale-provider/en_US';
+import { withRouter } from "react-router";
+import App from './layouts';
+
+export default withRouter((props) => {
+  return (
+    <LocaleProvider locale={enUS}>
+      <App>
+        { props.children }
+      </App>
+    </LocaleProvider>
+  )
+})
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
