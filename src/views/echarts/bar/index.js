@@ -17,7 +17,7 @@ export default class Bar extends React.Component {
     state={}
 
     componentWillMount(){
-        echarts.registerTheme('Imooc',echartTheme);
+        echarts.registerTheme('Bicycle',echartTheme);
     }
 
     getOption(){
@@ -135,10 +135,10 @@ export default class Bar extends React.Component {
         return (
             <div>
                 <Card title="柱形图表之一">
-                    <ReactEcharts option={this.getOption()} theme="Imooc" notMerge={true} lazyUpdate={true} style={{ height: 500 }} />
+                    <ReactEcharts option={this.getOption()} theme="Bicycle" notMerge={true} lazyUpdate={true} style={{ height: 500 }} />
                 </Card>
                 <Card title="柱形图表之二" style={{marginTop:10}}>
-                    <ReactEcharts option={this.getOption2()} theme="Imooc" notMerge={true} lazyUpdate={true} style={{ height: 500 }} />
+                    <ReactEcharts option={this.getOption2()} theme="Bicycle" notMerge={true} lazyUpdate={true} style={{ height: 500 }} />
                 </Card>
             </div> 
         );
