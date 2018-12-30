@@ -12,6 +12,8 @@ import Messages from '../views/ui/messages'
 import Tabs from '../views/ui/tabs'
 import Gallery from '../views/ui/gallery'
 import Carousel from '../views/ui/carousel'
+import FormLogin from '../views/form/login'
+import FormRegister from '../views/form/register'
 // import NoMatch from '../views/nomatch'
 
 export default class ERouter extends React.Component{
@@ -34,6 +36,8 @@ export default class ERouter extends React.Component{
                                     <Route path="/ui/tabs" component={Tabs} />
                                     <Route path="/ui/gallery" component={Gallery} />
                                     <Route path="/ui/carousel" component={Carousel} />
+                                    <Route path="/form/login" component={FormLogin} />
+                                    <Route path="/form/reg" component={FormRegister} />
                                     <Redirect to="/home" />
                                     {/* <Route component={NoMatch} /> */}
                                 </Switch>
