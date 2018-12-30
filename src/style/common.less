@@ -25,6 +25,12 @@ ul,li{
         height: calc(100vh);
         background-color: @colorL;
         overflow: auto;
+        .ant-layout-header {
+            background: #ffffff;
+            padding: 0;
+            height: 96px;
+            line-height: 64px;
+        }
     }
     .content{
         position: relative;
@@ -56,7 +62,8 @@ ul,li{
  
 /*定义滚动条轨道 内阴影+圆角*/
 ::-webkit-scrollbar-track{
-  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 6px rgb(255, 255, 255);
+  -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255);
   border-radius: 4px;
   background-color: #F5F5F5;
 }

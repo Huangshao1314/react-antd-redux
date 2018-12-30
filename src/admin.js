@@ -1,27 +1,39 @@
 import React from 'react'
-import { Row,Col } from 'antd';
-import Header from './components/Header'
-import Footer from './components/Footer'
+import { Row, Col, Layout, Menu, Breadcrumb, Icon } from 'antd';
+import MyHeader from './components/Header'
+import MyFooter from './components/Footer'
 import { connect } from 'react-redux'
 import NavLeft from './components/NavLeft'
 import './style/common.less'
-class Admin extends React.Component{
 
+const { Header, Sider, Content, Footer} = Layout;
+
+class Admin extends React.Component{
+    state = {
+      collapsed: false,
+    }
     render(){
         return (
-            <Row className="container">
-                <Col span="4" className="nav-left">
-                    <NavLeft/>
-                </Col>
-                <Col span="20" className="main">
-                    <Header/>
-                    <Row className="content">
-                        {/* <Home/> */}
-                        {this.props.children}
-                    </Row>
-                    <Footer/>
-                </Col>
-            </Row>
+          <Layout className="container" style={{ minHeight: '100vh' }}>
+              <Sider
+                trigger={null}
+                collapsible
+                collapsed={this.state.collapsed}
+                className="nav-left"
+                width={223}
+              >
+                <NavLeft/>
+              </Sider>
+              <Layout className="main" style={{ minHeight: '100vh' }}>
+                <Header>
+                  <MyHeader/>
+                </Header>
+                <Content className="content">
+                  {this.props.children}
+                  <MyFooter/>
+                </Content>
+              </Layout>
+            </Layout>
         );
     }
 }

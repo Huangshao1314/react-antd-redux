@@ -1,11 +1,13 @@
 import React from 'react'
-import { Row,Col } from "antd"
+import { Row, Col, Icon } from "antd"
 import './index.less'
 import Util from '../../utils/utils'
 import axios from '../../axios'
 import { connect } from 'react-redux'
 class Header extends React.Component{
-    state={}
+    state={
+      collapsed: false,
+    }
     componentWillMount(){
         this.setState({
             userName:'河畔一角'
@@ -33,6 +35,12 @@ class Header extends React.Component{
             }
         })
     }
+
+    toggle = () => {
+      this.setState({
+        collapsed: !this.state.collapsed
+      });
+    }
     render(){
         const { menuName, menuType } = this.props;
         return (
@@ -43,9 +51,14 @@ class Header extends React.Component{
                             <Col span="6" className="logo">
                                 <img src="/assets/logo-ant.svg" alt=""/>
                                 <span>Shared Bicycle 通用管理系统</span>
-                            </Col>:''
+                            </Col>:<Col span="1" className="logo">
+                              <Icon className="trigger"
+                                type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+                                onClick={this.toggle}
+                              />
+                            </Col>
                     }
-                    <Col span={menuType?18:24}>
+                    <Col span={menuType?18:23}>
                         <span>欢迎，{this.state.userName}</span>
                         <a href="#">退出</a>
                     </Col>
