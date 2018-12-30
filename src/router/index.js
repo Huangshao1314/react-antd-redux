@@ -14,6 +14,8 @@ import Gallery from '../views/ui/gallery'
 import Carousel from '../views/ui/carousel'
 import FormLogin from '../views/form/login'
 import FormRegister from '../views/form/register'
+import BasicTable from '../views/table/basicTable'
+import HighTable from '../views/table/highTable'
 // import NoMatch from '../views/nomatch'
 
 export default class ERouter extends React.Component{
@@ -38,6 +40,8 @@ export default class ERouter extends React.Component{
                                     <Route path="/ui/carousel" component={Carousel} />
                                     <Route path="/form/login" component={FormLogin} />
                                     <Route path="/form/reg" component={FormRegister} />
+                                    <Route path="/table/basic" component={BasicTable} />
+                                    <Route path="/table/high" component={HighTable} />
                                     <Redirect to="/home" />
                                     {/* <Route component={NoMatch} /> */}
                                 </Switch>
