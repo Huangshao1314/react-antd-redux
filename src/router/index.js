@@ -24,6 +24,7 @@ import BikeMap from '../views/map/bikeMap'
 import Bar from '../views/echarts/bar/index'
 import Pie from '../views/echarts/pie/index'
 import Line from '../views/echarts/line/index'
+import Permission from '../views/permission'
 // import NoMatch from '../views/nomatch'
 
 export default class ERouter extends React.Component{
@@ -58,6 +59,7 @@ export default class ERouter extends React.Component{
                                     <Route path="/charts/bar" component={Bar} />
                                     <Route path="/charts/pie" component={Pie} />
                                     <Route path="/charts/line" component={Line} />
+                                    <Route path="/permission" component={Permission} />
                                     <Redirect to="/home" />
                                     {/* <Route component={NoMatch} /> */}
                                 </Switch>
