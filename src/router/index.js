@@ -18,6 +18,7 @@ import BasicTable from '../views/table/basicTable'
 import HighTable from '../views/table/highTable'
 import Rich from '../views/rich'
 import City from '../views/city/index'
+import Order from '../views/order/index'
 // import NoMatch from '../views/nomatch'
 
 export default class ERouter extends React.Component{
@@ -46,6 +47,7 @@ export default class ERouter extends React.Component{
                                     <Route path="/table/high" component={HighTable} />
                                     <Route path='/rich' component={Rich} />
                                     <Route path="/city" component={City} />
+                                    <Route path="/order" component={Order} />
                                     <Redirect to="/home" />
                                     {/* <Route component={NoMatch} /> */}
                                 </Switch>
