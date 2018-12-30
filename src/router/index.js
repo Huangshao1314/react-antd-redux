@@ -16,6 +16,7 @@ import FormLogin from '../views/form/login'
 import FormRegister from '../views/form/register'
 import BasicTable from '../views/table/basicTable'
 import HighTable from '../views/table/highTable'
+import Rich from '../views/rich'
 // import NoMatch from '../views/nomatch'
 
 export default class ERouter extends React.Component{
@@ -42,6 +43,7 @@ export default class ERouter extends React.Component{
                                     <Route path="/form/reg" component={FormRegister} />
                                     <Route path="/table/basic" component={BasicTable} />
                                     <Route path="/table/high" component={HighTable} />
+                                    <Route path='/rich' component={Rich} />
                                     <Redirect to="/home" />
                                     {/* <Route component={NoMatch} /> */}
                                 </Switch>
