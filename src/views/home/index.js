@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import './index.css';
+import React from 'react'
+import './index.less'
+export default class Home extends React.Component{
 
-class Home extends Component {
-  render() {
-    return (
-      <div>Home</div>
-    );
-  }
+    render(){
+        return (
+            <div className="home-wrap">
+                共享单车后台管理系统
+            </div>
+        );
+    }
 }
-
-export default Home;
