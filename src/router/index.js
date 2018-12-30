@@ -21,6 +21,9 @@ import City from '../views/city/index'
 import Order from '../views/order/index'
 import User from '../views/user/index'
 import BikeMap from '../views/map/bikeMap'
+import Bar from '../views/echarts/bar/index'
+import Pie from '../views/echarts/pie/index'
+import Line from '../views/echarts/line/index'
 // import NoMatch from '../views/nomatch'
 
 export default class ERouter extends React.Component{
@@ -52,6 +55,9 @@ export default class ERouter extends React.Component{
                                     <Route path="/order" component={Order} />
                                     <Route path='/user' component={User} />
                                     <Route path='/bikeMap' component={BikeMap} />
+                                    <Route path="/charts/bar" component={Bar} />
+                                    <Route path="/charts/pie" component={Pie} />
+                                    <Route path="/charts/line" component={Line} />
                                     <Redirect to="/home" />
                                     {/* <Route component={NoMatch} /> */}
                                 </Switch>
