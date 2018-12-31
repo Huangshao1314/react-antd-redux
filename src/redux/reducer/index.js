@@ -11,6 +11,11 @@ const ebikeData = (state, action) => {
                 ...state,
                 menuName:action.menuName
             };
+        case type.COLLAPED_SIDER:
+            return {
+                ...state,
+                collapedFlag: action.collapedFlag
+            };
         default:
             return {...state};
     }

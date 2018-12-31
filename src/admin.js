@@ -9,16 +9,15 @@ import './style/common.less'
 const { Header, Sider, Content, Footer} = Layout;
 
 class Admin extends React.Component{
-    state = {
-      collapsed: false,
-    }
+
     render(){
+        const { collapedFlag } = this.props;
         return (
           <Layout className="container" style={{ minHeight: '100vh' }}>
               <Sider
                 trigger={null}
                 collapsible
-                collapsed={this.state.collapsed}
+                collapsed={collapedFlag}
                 className="nav-left"
                 width={223}
               >
@@ -37,4 +36,10 @@ class Admin extends React.Component{
         );
     }
 }
-export default connect()(Admin)
+
+const mapStateToProps = state => {
+  return {
+    collapedFlag: state.collapedFlag
+  }
+};
+export default connect(mapStateToProps)(Admin)

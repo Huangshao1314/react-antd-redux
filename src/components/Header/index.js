@@ -4,8 +4,13 @@ import './index.less'
 import Util from '../../utils/utils'
 import axios from '../../axios'
 import { connect } from 'react-redux'
+import { collapedSider } from './../../redux/action'
+
 class Header extends React.Component{
     state={
+      collapsed: false,
+    }
+    tempVal={
       collapsed: false,
     }
     componentWillMount(){
@@ -37,8 +42,13 @@ class Header extends React.Component{
     }
 
     toggle = () => {
+      this.tempVal.collapsed=!this.tempVal.collapsed;
+      // 事件派发，自动调用reducer，通过reducer保存到store对象中
+      const { dispatch } = this.props;
+      dispatch(collapedSider(this.tempVal.collapsed));
+
       this.setState({
-        collapsed: !this.state.collapsed
+        collapsed: this.tempVal.collapsed
       });
     }
     render(){
