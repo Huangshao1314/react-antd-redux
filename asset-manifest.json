@@ -1,7 +1,7 @@
 {
   "main.css": "/react-antd-redux/static/css/main.0553e6f7.chunk.css",
-  "main.js": "/react-antd-redux/static/js/main.0218c8a4.chunk.js",
-  "main.js.map": "/react-antd-redux/static/js/main.0218c8a4.chunk.js.map",
+  "main.js": "/react-antd-redux/static/js/main.8499dc02.chunk.js",
+  "main.js.map": "/react-antd-redux/static/js/main.8499dc02.chunk.js.map",
   "static/css/1.8f8af754.chunk.css": "/react-antd-redux/static/css/1.8f8af754.chunk.css",
   "static/js/1.8c7e6e22.chunk.js": "/react-antd-redux/static/js/1.8c7e6e22.chunk.js",
   "static/js/1.8c7e6e22.chunk.js.map": "/react-antd-redux/static/js/1.8c7e6e22.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/media/logo.svg": "/react-antd-redux/static/media/logo.ee7cd8ed.svg",
   "static/css/main.0553e6f7.chunk.css.map": "/react-antd-redux/static/css/main.0553e6f7.chunk.css.map",
   "index.html": "/react-antd-redux/index.html",
-  "precache-manifest.4db13e4b8321671a99a641bbd39f6e82.js": "/react-antd-redux/precache-manifest.4db13e4b8321671a99a641bbd39f6e82.js",
+  "precache-manifest.a9b032ef8a679ba9ed2f3642a781f4eb.js": "/react-antd-redux/precache-manifest.a9b032ef8a679ba9ed2f3642a781f4eb.js",
   "service-worker.js": "/react-antd-redux/service-worker.js"
 }
