@@ -69,7 +69,7 @@ class NavLeft extends React.Component {
             <div>
                 <NavLink to="/home" onClick={this.homeHandleClick}>
                     <div className="logo">
-                        <img src="/assets/logo-ant.svg" alt=""/>
+                        <img src="assets/logo-ant.svg" alt=""/>
                         <span>{ collapedFlag || 'Shared Bicycle MS' }</span>
                     </div>
                 </NavLink>
