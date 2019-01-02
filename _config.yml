@@ -1,6 +1,0 @@
-theme: jekyll-theme-cayman
-language: node_js
-node_js: stable
-script: npm run test
-notifications:
-  email: false
